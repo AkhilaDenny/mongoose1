@@ -1,0 +1,21 @@
+extends layout
+block content
+  nav
+      ul
+       li
+        a(href='/getAllContacts') ALL CONTACTS
+  h1= title
+  p Welcome to #{title}
+
+  form(action='saveData' method='get')
+     .row
+       .input-field.col.s6
+         label(for='name').active  Name
+         input#name.validate(type='text', name='name')
+     .row
+       .input-field.col.s6
+         label(for='phoneNo').active  Phone Number
+         input#phoneNo.validate(type='text', name='phoneNo')
+     .row
+         button.btn(type='submit') Go
+
